@@ -1,4 +1,4 @@
-package main.java.br.com.hangman.util;
+package br.com.hangman.util;
 
 public class HangmanDisplay {
     private final String[] hangmanStages = {
@@ -9,7 +9,7 @@ public class HangmanDisplay {
         "      |\n" +
         "      |\n" +
         "=========\n",
-        // Outros estágios (cabeça, corpo, braços, pernas) permanecem iguais
+        // Stages
         "  +---+\n" +
         "  |   |\n" +
         "  O   |\n" +

@@ -1,4 +1,4 @@
-package main.java.br.com.hangman.util;
+package br.com.hangman.util;
 
 public class ConsolePrinter {
 

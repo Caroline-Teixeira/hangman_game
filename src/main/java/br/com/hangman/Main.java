@@ -1,6 +1,6 @@
-package main.java.br.com.hangman;
+package br.com.hangman;
 
-import main.java.br.com.hangman.view.Menu;
+import br.com.hangman.view.Menu;
 
 public class Main {
     public static void main(String[] args) {

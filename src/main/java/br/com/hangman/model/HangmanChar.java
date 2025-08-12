@@ -1,4 +1,4 @@
-package main.java.br.com.hangman.model;
+package br.com.hangman.model;
 
 import java.util.Objects;
 

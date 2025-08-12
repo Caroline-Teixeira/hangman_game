@@ -1,4 +1,4 @@
-package main.java.br.com.hangman.exception;
+package br.com.hangman.exception;
 
 public class LetterAlreadyInputtedException extends RuntimeException {
 

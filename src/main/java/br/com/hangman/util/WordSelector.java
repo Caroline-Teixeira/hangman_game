@@ -1,4 +1,4 @@
-package main.java.br.com.hangman.util;
+package br.com.hangman.util;
 
 import java.util.*;
 
@@ -17,10 +17,30 @@ public class WordSelector {
     }
 
     public String getRandomWordByTopic(String topic) {
-        List<String> words = wordsByTopic.getOrDefault(topic.toLowerCase(), wordsByTopic.get("programacao"));
-        if (words == null || words.isEmpty()) {
-            throw new IllegalArgumentException("Tópico inválido: " + topic + ". Usando padrão.");
+        String normalizedTopic = topic.toLowerCase().trim();
+        if (!wordsByTopic.containsKey(normalizedTopic)) {
+            String suggestion = suggestTopic(normalizedTopic);
+            throw new IllegalArgumentException("Tópico inválido: '" + topic + "'. Tópicos disponíveis: " + 
+                getAvailableTopics() + ". Talvez você quis dizer: " + suggestion);
         }
-        return words.get(new Random().nextInt(words.size()));
+        List<String> words = wordsByTopic.get(normalizedTopic);
+        if (words == null || words.isEmpty()) {
+            throw new IllegalArgumentException("Nenhuma palavra disponível para o tópico: " + topic);
+        }
+        String selectedWord = words.get(new Random().nextInt(words.size()));
+        if (selectedWord == null || selectedWord.isEmpty()) {
+            throw new IllegalArgumentException("Palavra selecionada é inválida para o tópico: " + topic);
+        }
+        return selectedWord;
+    }
+
+    private String suggestTopic(String input) {
+    
+        for (String topic : wordsByTopic.keySet()) {
+            if (topic.startsWith(input)) {
+                return topic;
+            }
+        }
+        return getAvailableTopics().get(0); // Retorna o primeiro tópico disponível como sugestão
     }
 }
