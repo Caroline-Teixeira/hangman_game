@@ -1,6 +1,6 @@
 # 🕹️ Hangman Game in Java
 
-<a href="https://github.com/Caroline-Teixeira/hangman_game/blob/main/README_ENG.md"><img src="https://raw.githubusercontent.com/yammadev/flag-icons/refs/heads/master/png/BR%402x.png" alt="Portuguese" ></a>
+<a href="https://github.com/Caroline-Teixeira/hangman_game/blob/main/README.md"><img src="https://raw.githubusercontent.com/yammadev/flag-icons/refs/heads/master/png/BR%402x.png" alt="Portuguese" ></a>
 
 
 ![Made with Java](https://img.shields.io/badge/Made%20with-Java-orange?style=for-the-badge&logo=java)
